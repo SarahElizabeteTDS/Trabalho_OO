@@ -17,6 +17,11 @@ class Carta
         $this->dica = $dica;
     }
 
+    //tostring
+    public function __toString()
+    {
+        print "Arrumar bonitinho depois";
+    }
     //metodos (futuros)
     //
     //
@@ -96,16 +101,19 @@ array_push($baralho, $carta9);
 $carta10 = new Carta(10, "Fúria do Sul", "A-1B AMX", "Este caça é conhecido por sua força e versatilidade em combate. Seu nome faz referência à sua origem e poder de ataque, especialmente em missões no hemisfério sul.");
 array_push($baralho, $carta10);
 
+$sorteada = array_rand($baralho); // ver se isso vai dar certo
+
 //agora comeca o programa principal de verdade
 $opcao = 0;
+$encerrar = false;
 do 
 {
     print "\n-----------MENU-----------\n";
-    print "1- \n";
-    print "2- \n";
-    print "3- \n";
-    print "4- \n";
-    print "5- \n";
+    print "1- Ver todas as cartas!!!\n";
+    print "2- Adivinhar :)\n";
+    print "3- Ver pontuação atual!\n";
+    print "4- Dica ;)\n";
+    print "5- Desistir :(\n";
     print "0- SAIR\n";
     $opcao = readline("Selecione a opção: ");
     switch($opcao) 
@@ -116,27 +124,29 @@ do
     break;
 
     case 1:
-        
+        //mostrar todas as cartas bonitinhas e separadas com o tostring e o foreach
     break;
 
     case 2:
-        
+        //deixar o usuario advinhar, fazer o esquema de pontuacao aqui
     break;
 
     case 3:
-        
+        //so mostrar a pontuacao bonitinha
     break;
 
     case 4:
-        
+        //so dar um getDica aqui
     break;
 
     case 5:
-        
+        print "Que decepção...\nA carta certa era a: ";
+        //falta arrumar a variavel que sorteia a carta     
+        $encerrar = true;
     break;
 
     default:
         print "Opção inválida\n";
         system("clear");
     }
-}while($opcao != 0);
+}while($opcao != 0 || $encerrar == true);
