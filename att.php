@@ -20,7 +20,8 @@ class Carta
     //tostring
     public function __toString()
     {
-        print "Arrumar bonitinho depois";
+        return "Arrumar bonitinho depois";
+        //fazer um array associativo com todas as imagens (em ascii) de cartas, imprimir como saida junto com a descricao da carta
     }
     //metodos (futuros)
     //
@@ -101,7 +102,8 @@ array_push($baralho, $carta9);
 $carta10 = new Carta(10, "Fúria do Sul", "A-1B AMX", "Este caça é conhecido por sua força e versatilidade em combate. Seu nome faz referência à sua origem e poder de ataque, especialmente em missões no hemisfério sul.");
 array_push($baralho, $carta10);
 
-$sorteada = array_rand($baralho); // ver se isso vai dar certo
+$chaveAleatoria = array_rand($baralho);
+$sorteada = $baralho[$chaveAleatoria];
 
 //agora comeca o programa principal de verdade
 $opcao = 0;
