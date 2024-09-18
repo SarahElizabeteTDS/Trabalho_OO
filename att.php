@@ -377,7 +377,7 @@ do
         }
         else 
         {
-            print "Que decepção... A carta certa era a: \n" . $sorteada;
+            print "\nQue decepção... A carta certa era a: \n" . $sorteada;
             die;
         }
     break;
