@@ -291,6 +291,7 @@ array_push($baralho, $carta9);
 $carta10 = new Carta(10, "Fúria do Sul", "A-1B AMX", "Este caça é conhecido por sua força e versatilidade em combate. Seu nome faz referência à sua origem e poder de ataque, especialmente em missões no hemisfério sul.");
 array_push($baralho, $carta10);
 
+//aqui é sorteada a carta, atraves do indice do array "baralho"
 $chaveAleatoria = rand(1, count($baralho));
 $sorteada = $baralho[$chaveAleatoria - 1];
 
