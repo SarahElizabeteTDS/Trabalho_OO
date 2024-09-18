@@ -19,13 +19,202 @@ class Carta
 
     //tostring
     public function __toString()
-    {
-        return "Arrumar bonitinho depois";
-        //fazer um array associativo com todas as imagens (em ascii) de cartas, imprimir como saida junto com a descricao da carta
+    {   
+        $representacoesAviao = [
+            "F-39E Gripen" => "\n
+        +---------------------------+
+        |          Carta 01         |
+        +---------------------------+
+        |                           |
+        |        F-39E Gripen       |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |   Modelo: F-39E Gripen    |
+        +---------------------------+
+        |          Carta 01         |
+        +---------------------------+
+        \n",
+            "F-5EM Tiger II" => "\n
+        +---------------------------+
+        |          Carta 02         |
+        +---------------------------+
+        |                           |
+        |       F-5EM Tiger II      |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |   Modelo: F-5EM Tiger II  |
+        +---------------------------+
+        |          Carta 02         |
+        +---------------------------+
+        \n",
+            "A-1M AMX" => "\n
+        +---------------------------+
+        |          Carta 03         |
+        +---------------------------+
+        |                           |
+        |          A-1M AMX         |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |   Modelo: A-1M AMX        |
+        +---------------------------+
+        |          Carta 03         |
+        +---------------------------+
+        \n",
+            "Super Tucano A-29" => "\n
+        +---------------------------+
+        |          Carta 04         |
+        +---------------------------+
+        |                           |
+        |     Super Tucano A-29     |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |  Modelo: Super Tucano A-29|
+        +---------------------------+
+        |          Carta 04         |
+        +---------------------------+
+        \n",
+            "Mirage 2000" => "\n
+        +---------------------------+
+        |          Carta 05         |
+        +---------------------------+
+        |                           |
+        |     Super Mirage 2000     |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |  Modelo: Mirage 2000      |
+        +---------------------------+
+        |          Carta 05         |
+        +---------------------------+
+        \n",
+            "F-5FM Tiger II" => "\n
+        +---------------------------+
+        |          Carta 06         |
+        +---------------------------+
+        |                           |
+        |       F-5FM Tiger II      |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |  Modelo: F-5FM Tiger II   |
+        +---------------------------+
+        |          Carta 06         |
+        +---------------------------+
+        \n",
+            "F-39F Gripen" => "\n
+        +---------------------------+
+        |          Carta 07         |
+        +---------------------------+
+        |                           |
+        |        F-39F Gripen       |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |  Modelo: F-39F Gripen     |
+        +---------------------------+
+        |          Carta 07         |
+        +---------------------------+
+        \n",
+            "EMB-314 Super Tucano" => "\n
+        +---------------------------+
+        |          Carta 08         |
+        +---------------------------+
+        |                           |
+        |    EMB-314 Super Tucano   |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |Modelo:EMB-314 Super Tucano|
+        +---------------------------+
+        |          Carta 08         |
+        +---------------------------+
+        \n",
+            "P-3AM Orion" => "\n
+        +---------------------------+
+        |          Carta 09         |
+        +---------------------------+
+        |                           |
+        |        P-3AM Orion        |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |  Modelo: P-3AM Orion      |
+        +---------------------------+
+        |          Carta 09         |
+        +---------------------------+
+        \n",
+            "A-1B AMX" => "\n
+        +---------------------------+
+        |          Carta 10         |
+        +---------------------------+
+        |                           |
+        |          A-1B AMX         |
+        |                           |
+        |            ___            |
+        |   ________/   \________   |
+        |   \                   /   |
+        |    \___           ___/    |
+        |        \    |    /        |
+        |         \___|___/         |
+        |                           |
+        |  Modelo: A-1B AMX         |
+        +---------------------------+
+        |          Carta 10         |
+        +---------------------------+
+        \n"
+        ];
+
+        return "\nNúmero da carta: " . $this->numero . "\nNome da aeronave: " . $this->nome . "\nModelo da areonave: " . $this->modelo . "\nRepresentação da carta: " . $representacoesAviao[$this->modelo];
     }
-    //metodos (futuros)
-    //
-    //
 
     //gets and setts (setts serão menos necessarios, visto que o construct está no codigo)
 
@@ -91,23 +280,25 @@ $carta4 = new Carta(4, "Lobo Caçador", "Super Tucano A-29", "Este avião é con
 array_push($baralho, $carta4);
 $carta5 = new Carta(5, "Guardião dos Céus", "Mirage 2000", "Este caça é um ícone da época em que a FAB contava com aeronaves de origem francesa. Embora já tenha sido substituído, ainda é lembrado por sua impressionante capacidade de combate.");
 array_push($baralho, $carta5);
-$carta6 = new Carta(6, "Espectro Ágil", "F-5FM Tiger II (biposto)", "Possui um assento adicional para um co-piloto. É conhecida por sua agilidade e foi um dos principais caças da FAB antes da chegada dos modelos mais recentes.");
+$carta6 = new Carta(6, "Espectro Ágil", "F-5FM Tiger II", "Possui um assento adicional para um co-piloto. É conhecida por sua agilidade e foi um dos principais caças da FAB antes da chegada dos modelos mais recentes.");
 array_push($baralho, $carta6);
-$carta7 = new Carta(7, "Pantera Negra", "F-39F Gripen (versão biposto)", "Versão de treinamento do moderno caça sueco, com dois assentos. Seu nome é uma referência a um felino icônico e simboliza a sofisticação e a força do modelo.");
+$carta7 = new Carta(7, "Pantera Negra", "F-39F Gripen", "Versão de treinamento do moderno caça sueco, com dois assentos. Seu nome é uma referência a um felino icônico e simboliza a sofisticação e a força do modelo.");
 array_push($baralho, $carta7);
 $carta8 = new Carta(8, "Defensor do Pantanal", "EMB-314 Super Tucano", "Este avião é conhecido por suas capacidades de ataque leve e treinamento. Seu nome faz referência a uma região brasileira rica em biodiversidade, onde ele frequentemente opera.");
 array_push($baralho, $carta8);
-$carta9 = new Carta(9, "Guardião do Atlântico", "P-3AM Orion (patrulha naval, apoio a caças)", "Este não é um caça, mas um patrulheiro naval essencial para a proteção das águas brasileiras. Seu nome reflete sua função de vigilância e proteção sobre o vasto oceano Atlântico.");
+$carta9 = new Carta(9, "Guardião do Atlântico", "P-3AM Orion", "Este não é um caça, mas um patrulheiro naval essencial para a proteção das águas brasileiras. Seu nome reflete sua função de vigilância e proteção sobre o vasto oceano Atlântico.");
 array_push($baralho, $carta9);
 $carta10 = new Carta(10, "Fúria do Sul", "A-1B AMX", "Este caça é conhecido por sua força e versatilidade em combate. Seu nome faz referência à sua origem e poder de ataque, especialmente em missões no hemisfério sul.");
 array_push($baralho, $carta10);
 
-$chaveAleatoria = array_rand($baralho);
-$sorteada = $baralho[$chaveAleatoria];
+$chaveAleatoria = rand(1, count($baralho));
+$sorteada = $baralho[$chaveAleatoria - 1];
 
 //agora comeca o programa principal de verdade
 $opcao = 0;
-$encerrar = false;
+$ganhou = false;
+$tentativas = 0;
+$chute = 0;
 do 
 {
     print "\n-----------MENU-----------\n";
@@ -116,7 +307,8 @@ do
     print "3- Ver pontuação atual!\n";
     print "4- Dica ;)\n";
     print "5- Desistir :(\n";
-    print "0- SAIR\n";
+    print "0- SAIR";
+    print "\n--------------------------\n";
     $opcao = readline("Selecione a opção: ");
     switch($opcao) 
     {
@@ -126,29 +318,72 @@ do
     break;
 
     case 1:
-        //mostrar todas as cartas bonitinhas e separadas com o tostring e o foreach
+        $inx = 1;
+        foreach($baralho as $b)
+        {
+            print "\n" . $inx . " - \n" . $b;
+            $inx++;
+        }
     break;
 
     case 2:
-        //deixar o usuario advinhar, fazer o esquema de pontuacao aqui
+        $chute = readline("\nInforme o índice da carta: ");
+        if ($ganhou == true) 
+        {
+            print "\nVocê já ganhou!\n";
+        }
+        else 
+        {
+            if ($chute == $chaveAleatoria) 
+            {
+                print "Parabéns, você acertou!\n";
+                $ganhou = true;
+            }
+            else if ($chute != $chaveAleatoria && $chute > 0 && $chute <= count($baralho))
+            {
+                print "Uma pena, você errou!\n";
+                $tentativas++;
+            }
+            else
+            {
+                print "Essa carta não existe...\n";
+            }
+        }
     break;
 
     case 3:
-        //so mostrar a pontuacao bonitinha
+        if ($tentativas == 0) 
+        {
+            print "Você atingiu a pontuação 100! Será um gênio da probabilidade? Parabéns!\n";
+        }
+        elseif ($tentativas  > 0 && $tentativas <= 9) 
+        {
+            print "Sua pontuação é de: " . 100 - ($tentativas * 10);
+        }
+        else if ($tentativas == 10)
+        {
+            print "Você é absurdamente azarado no jogo, sua pontuação é 0! Sua vida amorosa está com sorte! haha\n";
+        }
     break;
 
     case 4:
-        //so dar um getDica aqui
+        print "\nPrecisa de dica, é? Lá vai então: \n" . $sorteada->getDica() . "\n";
     break;
 
     case 5:
-        print "Que decepção...\nA carta certa era a: ";
-        //falta arrumar a variavel que sorteia a carta     
-        $encerrar = true;
+        if ($ganhou == true) 
+        {
+            print "\nVocê já ganhou!\n";
+        }
+        else 
+        {
+            print "Que decepção... A carta certa era a: \n" . $sorteada;
+            die;
+        }
     break;
 
     default:
         print "Opção inválida\n";
         system("clear");
     }
-}while($opcao != 0 || $encerrar == true);
+}while($opcao != 0);
