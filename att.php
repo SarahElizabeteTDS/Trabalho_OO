@@ -7,6 +7,198 @@ class Carta
     private string $nome;
     private string $modelo;
     private string $dica;
+    private array $representacoesAviao = [
+        "F-39E Gripen" => "\n
+    +---------------------------+
+    |          Carta 01         |
+    +---------------------------+
+    |                           |
+    |        F-39E Gripen       |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |   Modelo: F-39E Gripen    |
+    +---------------------------+
+    |          Carta 01         |
+    +---------------------------+
+    \n",
+        "F-5EM Tiger II" => "\n
+    +---------------------------+
+    |          Carta 02         |
+    +---------------------------+
+    |                           |
+    |       F-5EM Tiger II      |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |   Modelo: F-5EM Tiger II  |
+    +---------------------------+
+    |          Carta 02         |
+    +---------------------------+
+    \n",
+        "A-1M AMX" => "\n
+    +---------------------------+
+    |          Carta 03         |
+    +---------------------------+
+    |                           |
+    |          A-1M AMX         |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |   Modelo: A-1M AMX        |
+    +---------------------------+
+    |          Carta 03         |
+    +---------------------------+
+    \n",
+        "Super Tucano A-29" => "\n
+    +---------------------------+
+    |          Carta 04         |
+    +---------------------------+
+    |                           |
+    |     Super Tucano A-29     |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |  Modelo: Super Tucano A-29|
+    +---------------------------+
+    |          Carta 04         |
+    +---------------------------+
+    \n",
+        "Mirage 2000" => "\n
+    +---------------------------+
+    |          Carta 05         |
+    +---------------------------+
+    |                           |
+    |     Super Mirage 2000     |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |  Modelo: Mirage 2000      |
+    +---------------------------+
+    |          Carta 05         |
+    +---------------------------+
+    \n",
+        "F-5FM Tiger II" => "\n
+    +---------------------------+
+    |          Carta 06         |
+    +---------------------------+
+    |                           |
+    |       F-5FM Tiger II      |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |  Modelo: F-5FM Tiger II   |
+    +---------------------------+
+    |          Carta 06         |
+    +---------------------------+
+    \n",
+        "F-39F Gripen" => "\n
+    +---------------------------+
+    |          Carta 07         |
+    +---------------------------+
+    |                           |
+    |        F-39F Gripen       |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |  Modelo: F-39F Gripen     |
+    +---------------------------+
+    |          Carta 07         |
+    +---------------------------+
+    \n",
+        "EMB-314 Super Tucano" => "\n
+    +---------------------------+
+    |          Carta 08         |
+    +---------------------------+
+    |                           |
+    |    EMB-314 Super Tucano   |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |Modelo:EMB-314 Super Tucano|
+    +---------------------------+
+    |          Carta 08         |
+    +---------------------------+
+    \n",
+        "P-3AM Orion" => "\n
+    +---------------------------+
+    |          Carta 09         |
+    +---------------------------+
+    |                           |
+    |        P-3AM Orion        |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |  Modelo: P-3AM Orion      |
+    +---------------------------+
+    |          Carta 09         |
+    +---------------------------+
+    \n",
+        "A-1B AMX" => "\n
+    +---------------------------+
+    |          Carta 10         |
+    +---------------------------+
+    |                           |
+    |          A-1B AMX         |
+    |                           |
+    |            ___            |
+    |   ________/   \________   |
+    |   \                   /   |
+    |    \___           ___/    |
+    |        \    |    /        |
+    |         \___|___/         |
+    |                           |
+    |  Modelo: A-1B AMX         |
+    +---------------------------+
+    |          Carta 10         |
+    +---------------------------+
+    \n"
+    ];
 
     //construct
     public function __construct($num, $nome, $modelo, $dica)
@@ -20,200 +212,7 @@ class Carta
     //tostring
     public function __toString()
     {   
-        $representacoesAviao = [
-            "F-39E Gripen" => "\n
-        +---------------------------+
-        |          Carta 01         |
-        +---------------------------+
-        |                           |
-        |        F-39E Gripen       |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |   Modelo: F-39E Gripen    |
-        +---------------------------+
-        |          Carta 01         |
-        +---------------------------+
-        \n",
-            "F-5EM Tiger II" => "\n
-        +---------------------------+
-        |          Carta 02         |
-        +---------------------------+
-        |                           |
-        |       F-5EM Tiger II      |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |   Modelo: F-5EM Tiger II  |
-        +---------------------------+
-        |          Carta 02         |
-        +---------------------------+
-        \n",
-            "A-1M AMX" => "\n
-        +---------------------------+
-        |          Carta 03         |
-        +---------------------------+
-        |                           |
-        |          A-1M AMX         |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |   Modelo: A-1M AMX        |
-        +---------------------------+
-        |          Carta 03         |
-        +---------------------------+
-        \n",
-            "Super Tucano A-29" => "\n
-        +---------------------------+
-        |          Carta 04         |
-        +---------------------------+
-        |                           |
-        |     Super Tucano A-29     |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |  Modelo: Super Tucano A-29|
-        +---------------------------+
-        |          Carta 04         |
-        +---------------------------+
-        \n",
-            "Mirage 2000" => "\n
-        +---------------------------+
-        |          Carta 05         |
-        +---------------------------+
-        |                           |
-        |     Super Mirage 2000     |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |  Modelo: Mirage 2000      |
-        +---------------------------+
-        |          Carta 05         |
-        +---------------------------+
-        \n",
-            "F-5FM Tiger II" => "\n
-        +---------------------------+
-        |          Carta 06         |
-        +---------------------------+
-        |                           |
-        |       F-5FM Tiger II      |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |  Modelo: F-5FM Tiger II   |
-        +---------------------------+
-        |          Carta 06         |
-        +---------------------------+
-        \n",
-            "F-39F Gripen" => "\n
-        +---------------------------+
-        |          Carta 07         |
-        +---------------------------+
-        |                           |
-        |        F-39F Gripen       |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |  Modelo: F-39F Gripen     |
-        +---------------------------+
-        |          Carta 07         |
-        +---------------------------+
-        \n",
-            "EMB-314 Super Tucano" => "\n
-        +---------------------------+
-        |          Carta 08         |
-        +---------------------------+
-        |                           |
-        |    EMB-314 Super Tucano   |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |Modelo:EMB-314 Super Tucano|
-        +---------------------------+
-        |          Carta 08         |
-        +---------------------------+
-        \n",
-            "P-3AM Orion" => "\n
-        +---------------------------+
-        |          Carta 09         |
-        +---------------------------+
-        |                           |
-        |        P-3AM Orion        |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |  Modelo: P-3AM Orion      |
-        +---------------------------+
-        |          Carta 09         |
-        +---------------------------+
-        \n",
-            "A-1B AMX" => "\n
-        +---------------------------+
-        |          Carta 10         |
-        +---------------------------+
-        |                           |
-        |          A-1B AMX         |
-        |                           |
-        |            ___            |
-        |   ________/   \________   |
-        |   \                   /   |
-        |    \___           ___/    |
-        |        \    |    /        |
-        |         \___|___/         |
-        |                           |
-        |  Modelo: A-1B AMX         |
-        +---------------------------+
-        |          Carta 10         |
-        +---------------------------+
-        \n"
-        ];
-
-        return "\nNúmero da carta: " . $this->numero . "\nNome da aeronave: " . $this->nome . "\nModelo da areonave: " . $this->modelo . "\nRepresentação da carta: " . $representacoesAviao[$this->modelo];
+        return "\nNúmero da carta: " . $this->numero . "\nNome da aeronave: " . $this->nome . "\nModelo da areonave: " . $this->modelo . "\nRepresentação da carta: " . $this->representacoesAviao[$this->modelo];
     }
 
     //gets and setts (setts serão menos necessarios, visto que o construct está no codigo)
@@ -297,7 +296,6 @@ $sorteada = $baralho[$chaveAleatoria - 1];
 
 //agora comeca o programa principal de verdade
 $opcao = 0;
-$ganhou = false;
 $tentativas = 0;
 $chute = 0;
 do 
@@ -329,41 +327,34 @@ do
 
     case 2:
         $chute = readline("\nInforme o índice da carta: ");
-        if ($ganhou == true) 
+        if ($chute == $chaveAleatoria) 
         {
-            print "\nVocê já ganhou!\n";
+            print "Parabéns, você ganhou!\n";
+            die; 
         }
-        else 
+        else if ($chute != $chaveAleatoria && $chute > 0 && $chute <= count($baralho))
         {
-            if ($chute == $chaveAleatoria) 
-            {
-                print "Parabéns, você acertou!\n";
-                $ganhou = true;
-            }
-            else if ($chute != $chaveAleatoria && $chute > 0 && $chute <= count($baralho))
-            {
-                print "Uma pena, você errou!\n";
-                $tentativas++;
-            }
-            else
-            {
-                print "Essa carta não existe...\n";
-            }
+            print "Uma pena, você errou!\n";
+            $tentativas++;
+        }
+        else if ($chute < 0 || is_int($chute) == false)
+        {
+            print "Insira um número válido...\n";
         }
     break;
 
     case 3:
         if ($tentativas == 0) 
         {
-            print "Você atingiu a pontuação 100! Será um gênio da probabilidade? Parabéns!\n";
+            print "Você não tentou ainda...\n";
         }
-        elseif ($tentativas  > 0 && $tentativas <= 9) 
+        elseif ($tentativas < 8) 
         {
-            print "Sua pontuação é de: " . 100 - ($tentativas * 10);
+            print "Sua pontuação atual é de: " . 100 - ($tentativas * 10);
         }
-        else if ($tentativas == 10)
+        elseif ($tentativas >= 8)
         {
-            print "Você é absurdamente azarado no jogo, sua pontuação é 0! Sua vida amorosa está com sorte! haha\n";
+            print "Você é absurdamente azarado no jogo, sua pontuação é quase 0! Sua vida amorosa está com sorte! haha\n";
         }
     break;
 
@@ -372,15 +363,8 @@ do
     break;
 
     case 5:
-        if ($ganhou == true) 
-        {
-            print "\nVocê já ganhou!\n";
-        }
-        else 
-        {
-            print "\nQue decepção... A carta certa era a: \n" . $sorteada;
-            die;
-        }
+        print "\nQue decepção... A carta certa era a: \n" . $sorteada;
+        die;
     break;
 
     default:
